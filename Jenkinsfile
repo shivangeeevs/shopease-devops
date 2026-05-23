@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Git Checkout') {
-            steps {
-                git 'git@github.com:shivangeeevs/shopease-devops.git'
-            }
-        }
-
         stage('Build Backend Docker Image') {
             steps {
                 sh 'docker build -t shopease-backend:v1 ./backend'
